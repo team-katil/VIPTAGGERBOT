@@ -56,7 +56,7 @@ async def handler(event):
                       [
                        Button.url('🎉  add me in your group  🎉', f'https://t.me/{USERNAME}?startgroup=a')],
                       [Button.inline("📚  commands  ", data="commands"),
-                       Button.url('📝  support  ', f'https://t.me/katilsupport')]
+                       Button.url('📝  channel  ', f'https://t.me/katil_bots')]
                     ),
                     link_preview=False)
 
@@ -74,12 +74,12 @@ async def handler(event):
                     ),
                     link_preview=False)
 
-# 5 li etiketleme modulü
+# 5 member tag modules
 @client.on(events.NewMessage(pattern="^/utag ?(.*)"))
 async def mentionall(event):
   global gece_tag
   if event.is_private:
-    return await event.respond(f"{noqrup}")
+    return await event.respond(f"{nogroup}")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
@@ -94,51 +94,51 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("𝖤𝗌𝗄𝗂 𝖬𝖾𝗌𝖺𝗃𝗅𝖺𝗋𝗂 𝖦𝗈𝗋𝖾𝗆𝗂𝗒𝗈𝗋𝗎𝗆 ! ")
+        return await event.respond("i can't see old messages ! ")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("• 𝖤𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝖬𝖾𝗌𝖺𝗃𝗂 𝖸𝖺𝗓𝗆𝖺𝖽𝗂𝗇 ! ")
+    return await event.respond("• you didn't write tagging message ! ")
   else:
-    return await event.respond("• 𝖤𝗍𝗂𝗄𝖾𝗍 𝗂𝗌𝗅𝖾𝗆𝗂𝗇𝖾 𝖻𝖺𝗌𝗅𝖺𝗆𝖺𝗆 𝗂𝖼𝗂𝗇 𝖻𝗂𝗋 𝗌𝖾𝖻𝖾𝗉 𝗒𝖺𝗓𝗂𝗇 ! ")
+    return await event.respond("• give me a reason to start the tag process ! ")
     
   if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "✅ merdoobey üye etiketleme işlemini başlattı . . .",
+    await client.send_message(event.chat_id, "✅member tagging process started . . .",
                     buttons=(
                       [
-                      Button.url('📝  support  📝', f'https://t.me/katilsupport')
+                      Button.url('📝  channel  📝', f'https://t.me/katil_bots')
                       ]
                     )
                   ) 
     gece_tag.append(event.chat_id)
-    usrnum = 0
-    usrtxt = ""
+    usernum = 0
+    usertxt = ""
     async for usr in client.iter_participants(event.chat_id):
-      usrnum += 1
-      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) , "
+      usernum += 1
+      usertxt += f"[{usr.first_name}](tg://user?id={usr.id}) , "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ merdobey üye işlemini durdurdu . . .",
+        await event.respond("⛔ your action stop . . .",
                     buttons=(
                       [
-                       Button.url('📝  support  📝', f'https://t.me/katilsupport')
+                       Button.url('📝  channel  📝', f'https://t.me/katil_bots')
                       ]
                     )
                   )
         return
-      if usrnum == 5:
+      if usernum == 5:
         await client.send_message(event.chat_id, f"{msg} \n {usrtxt}")
         await asyncio.sleep(2)
-        usrnum = 0
-        usrtxt = ""
+        usernum = 0
+        usertxt = ""
 
     
 
 #########################
 
-# admin etiketleme modülü
+# admin tagging modules
 @client.on(events.NewMessage(pattern="^/atag ?(.*)"))
 async def mentionalladmin(event):
   global gece_tag
   if event.is_private:
-    return await event.respond(f"{noqrup}")
+    return await event.respond(f"{nogroup}")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
@@ -153,31 +153,31 @@ async def mentionalladmin(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("𝖤𝗌𝗄𝗂 𝖬𝖾𝗌𝖺𝗃𝗅𝖺𝗋𝗂 𝖦𝗈𝗋𝖾𝗆𝗂𝗒𝗈𝗋𝗎𝗆 ! ")
+        return await event.respond("i can't see old messages  ! ")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("• 𝖤𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝖬𝖾𝗌𝖺𝗃𝗂 𝖸𝖺𝗓𝗆𝖺𝖽𝗂𝗇 ! ")
+    return await event.respond("• you didn't write tagging message ! ")
   else:
-    return await event.respond("• 𝖤𝗍𝗂𝗄𝖾𝗍 𝗂𝗌𝗅𝖾𝗆𝗂𝗇𝖾 𝖻𝖺𝗌𝗅𝖺𝗆𝖺𝗆 𝗂𝖼𝗂𝗇 𝖻𝗂𝗋 𝗌𝖾𝖻𝖾𝗉 𝗒𝖺𝗓𝗂𝗇 ! ")
+    return await event.respond("• give me a reason to start the tag process ! ")
     
   if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "✅ merdoobey 𝖠𝖽𝗆𝗂𝗇 𝖾𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝗂𝗌𝗅𝖾𝗆𝗂 𝖻𝖺𝗌𝗅𝖺ttı . . .",
+    await client.send_message(event.chat_id, "✅admin tagging process started . . .",
                     buttons=(
                       [
-                       Button.url('📝  support  📝', f'https://t.me/katilsupport')
+                       Button.url('📝  channel  📝', f'https://t.me/katil_bots')
                       ]
                     )
                   ) 
     gece_tag.append(event.chat_id)
-    usrnum = 0
-    usrtxt = ""
-    async for usr in client.iter_participants(event.chat_id):
-      usrnum += 1
-      usrtxt += f"• [{usr.first_name}](tg://user?id={usr.id}) "
+    usernum = 0
+    usertxt = ""
+    async for user in client.iter_participants(event.chat_id):
+      usernum += 1
+      usertxt += f"• [{user.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ merdoobey 𝖾𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝗂𝗌𝗅𝖾𝗆𝗂 𝖽𝗎𝗋𝖽𝗎𝗋du . . .",
+        await event.respond("⛔ tagging stopped . . .",
                     buttons=(
                       [
-                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/ChatKaos')
+                       Button.url('📝  channel  📝', f'https://t.me/katil_bots')
                       ]
                     )
                   )
@@ -185,8 +185,8 @@ async def mentionalladmin(event):
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt} \n {msg}")
         await asyncio.sleep(2)
-        usrnum = 0
-        usrtxt = ""
+        usernum = 0
+        usertxt = ""
 
     
 
