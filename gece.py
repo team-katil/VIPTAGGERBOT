@@ -37,9 +37,9 @@ async def start(event):
      await client.send_message(log_qrup, f"ℹ️ **Yeni Kullanıcı -** \n {ad}")
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.url('🎉  𝖡𝖾𝗇𝗂 𝖦𝗋𝗎𝖻𝖺 𝖤𝗄𝗅𝖾  🎉', f'https://t.me/{USERNAME}?startgroup=a')],
+                       Button.url('🎉  add me in your group  🎉', f'https://t.me/{USERNAME}?startgroup=a')],
                       [Button.inline("📚  𝖪𝗈𝗆𝗎𝗍𝗅𝖺𝗋  ", data="komutlar"),
-                       Button.url('📝  𝖢𝗁𝖺𝗇𝗇𝖾𝗅  ', f'https://t.me/{support}')]
+                       Button.url('📝  support  ', f'https://t.me/{support}')]
                     ),
                     link_preview=False)
 
@@ -54,9 +54,9 @@ async def handler(event):
      ad = f"• 𝖬𝖾𝗋𝗁𝖺𝖻𝖺 [{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.url('🎉  𝖡𝖾𝗇𝗂 𝖦𝗋𝗎𝖻𝖺 𝖤𝗄𝗅𝖾  🎉', f'https://t.me/{USERNAME}?startgroup=a')],
+                       Button.url('🎉  add me in your group  🎉', f'https://t.me/{USERNAME}?startgroup=a')],
                       [Button.inline("📚  𝖪𝗈𝗆𝗎𝗍𝗅𝖺𝗋  ", data="komutlar"),
-                       Button.url('📝  𝖢𝗁𝖺𝗇𝗇𝖾𝗅  ', f'https://t.me/ChatKaos')]
+                       Button.url('📝  support  ', f'https://t.me/katilsupport')]
                     ),
                     link_preview=False)
 
@@ -65,8 +65,8 @@ async def handler(event):
 async def handler(event):
     await event.edit(f"{komutlar}", buttons=(
                       [
-                      Button.url('📣  𝖲𝗎𝗉𝗉𝗈𝗋𝗍  ', f'https://t.me/ChatKaos'),
-                      Button.url('🇹🇷  𝖮𝗐𝗇𝖾𝗋  ', f'https://t.me/Merdoobeyims')
+                      Button.url('📣  𝖲𝗎𝗉𝗉𝗈𝗋𝗍  ', f'https://t.me/katilsupport'),
+                      Button.url('🇹🇷  𝖮𝗐𝗇𝖾𝗋  ', f'https://t.me/katil_your_dad')
                       ],
                       [
                       Button.inline("<  𝖦𝖾𝗋𝗂  >", data="start"),
@@ -104,7 +104,7 @@ async def mentionall(event):
     await client.send_message(event.chat_id, "✅ merdoobey üye etiketleme işlemini başlattı . . .",
                     buttons=(
                       [
-                      Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/ChatKaos')
+                      Button.url('📝  support  📝', f'https://t.me/katilsupport')
                       ]
                     )
                   ) 
@@ -118,7 +118,7 @@ async def mentionall(event):
         await event.respond("⛔ merdobey üye işlemini durdurdu . . .",
                     buttons=(
                       [
-                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/ChatKaos')
+                       Button.url('📝  support  📝', f'https://t.me/katilsupport')
                       ]
                     )
                   )
@@ -163,7 +163,7 @@ async def mentionalladmin(event):
     await client.send_message(event.chat_id, "✅ merdoobey 𝖠𝖽𝗆𝗂𝗇 𝖾𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝗂𝗌𝗅𝖾𝗆𝗂 𝖻𝖺𝗌𝗅𝖺ttı . . .",
                     buttons=(
                       [
-                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/ChatKaos')
+                       Button.url('📝  support  📝', f'https://t.me/katilsupport')
                       ]
                     )
                   ) 
@@ -222,7 +222,7 @@ async def tektag(event):
     await client.send_message(event.chat_id, "✅ merdobey 𝖾𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝗂𝗌𝗅𝖾𝗆𝗂 𝖻𝖺𝗌𝗅𝖺ttı . . .",
                     buttons=(
                       [
-                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/ChatKaos')
+                       Button.url('📝  support  📝', f'https://t.me/katilsupport')
                       ]
                     )
                   ) 
@@ -236,7 +236,7 @@ async def tektag(event):
         await event.respond("⛔ merdobey 𝖾𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝗂𝗌𝗅𝖾𝗆𝗂 𝖽𝗎𝗋𝖽𝗎𝗋du . . .",
                     buttons=(
                       [
-                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/ChatKaos')
+                       Button.url('📝  support  📝', f'https://t.me/katilsupport')
                       ]
                     )
                   )
@@ -296,7 +296,7 @@ async def etag(event):
     await client.send_message(event.chat_id, "✅ merdobey 𝖾𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝗂𝗌𝗅𝖾𝗆𝗂 𝖻𝖺𝗌𝗅𝖺ttı . . .",
                     buttons=(
                       [
-                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/ChatKaos')
+                       Button.url('📝  support  📝', f'https://t.me/katilsupport')
                       ]
                     )
                   ) 
@@ -310,7 +310,7 @@ async def etag(event):
         await event.respond("⛔ merdobey 𝖾𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝗂𝗌𝗅𝖾𝗆𝗂 𝖽𝗎𝗋𝖽𝗎𝗋du . . .",
                     buttons=(
                       [
-                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/ChatKaos')
+                       Button.url('📝  support  📝', f'https://t.me/katilsupport')
                       ]
                     )
                   )
@@ -408,7 +408,7 @@ async def stag(event):
     await client.send_message(event.chat_id, "• merdobey 𝖾𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝗂𝗌𝗅𝖾𝗆𝗂 𝖻𝖺𝗌𝗅𝖺ttı . . .",
                     buttons=(
                       [
-                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/ChatKaos')
+                       Button.url('📝  support  📝', f'https://t.me/katilsupport')
                       ]
                     )
                   ) 
@@ -422,7 +422,7 @@ async def stag(event):
         await event.respond("⛔ merdobey 𝖾𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝗂𝗌𝗅𝖾𝗆𝗂 𝖽𝗎𝗋𝖽urdu . . .",
                     buttons=(
                       [
-                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/ChatKaos')
+                       Button.url('📝  support  📝', f'https://t.me/katilsupport')
                       ]
                     )
                   )
@@ -469,7 +469,7 @@ async def rtag(event):
     await client.send_message(event.chat_id, "✅ merdobey 𝖾𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝗂𝗌𝗅𝖾𝗆𝗂 𝖻𝖺𝗌𝗅𝖺ttı . . .",
                     buttons=(
                       [
-                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/ChatKaos')
+                       Button.url('📝  support  📝', f'https://t.me/support')
                       ]
                     )
                   ) 
@@ -483,7 +483,7 @@ async def rtag(event):
         await event.respond("⛔ merdobey 𝖾𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝗂𝗌𝗅𝖾𝗆𝗂 𝖽𝗎𝗋durdu .",
                     buttons=(
                       [
-                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/ChatKaos')
+                       Button.url('📝  support  📝', f'https://t.me/katilsupport')
                       ]
                     )
                   )
