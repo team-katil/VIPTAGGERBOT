@@ -11,15 +11,15 @@
    "repository": "https://github.com/itvenom/tag",
    "env": {
       "TOKEN": {
-         "description": "Botunuzun tokenini bura yazın",
+         "description": "Type your bot's token here",
          "value": ""
       },
       "APP_ID": {
-         "description": "my.telegram.org adresindən APP ID alın.",
+         "description": "Get APP ID from my.telegram.org.",
          "value": ""
       },
       "API_HASH": {
-         "description": "my.telegram.org adresindən API HASH alın",
+         "description": "Get API HASH from my.telegram.org",
          "value": ""
       },    
       "LOG_QRUP": {
