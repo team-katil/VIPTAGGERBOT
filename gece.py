@@ -1,9 +1,9 @@
 #################################
-# mentionall Tagger Bot #
+# Vip Tagger Bot #
 #################################
-# Repo Sahibi - ByWolk 
-# Telegram - t.me/StarBotKanal
-# Telegram - t.me/Bywolk 
+# team-katil - @katil_your_dad
+# Telegram - t.me/katilupdate
+# Telegram - t.me/katil_your_dad
 ##################################
 import heroku3
 import random
