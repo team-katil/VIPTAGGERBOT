@@ -30,13 +30,13 @@
          "description": "Enter the bot's username without the @ sign",
          "value": ""
       },
-      "sahib": {
-         "description": "Kendi kullanıcı adınızı yazınız @ işareti olmadan",
-         "value": "tMertTt"
+      "owner": {
+         "description": "Type your own username without the @ sign",
+         "value": "katil_your_dad"
       },      
       "support": {
-         "description": "Bura support grubunuz yada kanalınızın kullanıcı adı @ işareti olmadan yazın",
-         "value": "sohbetmuhabbetw"
+         "description": "Type here the username of your support group or channel without the @ sign",
+         "value": "katilsupport"
       },
       "startmesaj": {
          "description": "Bota start verilince mesajınız",
