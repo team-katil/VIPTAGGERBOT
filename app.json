@@ -22,12 +22,12 @@
          "description": "Get API HASH from my.telegram.org",
          "value": ""
       },    
-      "LOG_QRUP": {
-         "description": "log grubun id si",
+      "LOG_GROUP": {
+         "description": "TYPE YOUR LOG GROUP ID",
          "value": ""
       },
       "USERNAME": {
-         "description": "Botun kullanıcı adı yazınız @ işareti olmadan",
+         "description": "Enter the bot's username without the @ sign",
          "value": ""
       },
       "sahib": {
