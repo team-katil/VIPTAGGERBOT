@@ -13,7 +13,7 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
-from config import client, USERNAME, log_qrup, startmesaj, qrupstart, komutlar, sahib, support
+from config import client, USERNAME, log_group, startmessage, groupstart, commands, owner, support
 
 logging.basicConfig(
     level=logging.INFO,
@@ -28,17 +28,17 @@ gece_tag = []
 
 
   
-# Başlanğıc Mesajı
+# start message 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   if event.is_private:
-    async for usr in client.iter_participants(event.chat_id):
-     ad = f"• 𝖬𝖾𝗋𝗁𝖺𝖻𝖺 [{usr.first_name}](tg://user?id={usr.id}) "
-     await client.send_message(log_qrup, f"ℹ️ **Yeni Kullanıcı -** \n {ad}")
-     return await event.reply(f"{ad} {startmesaj}", buttons=(
+    async for user in client.iter_participants(event.chat_id):
+     ad = f"• HELLO [{user.first_name}](tg://user?id={usr.id}) "
+     await client.send_message(log_group, f"ℹ️ **New User -** \n {ad}")
+     return await event.reply(f"{ad} {startmessage}", buttons=(
                       [
                        Button.url('🎉  add me in your group  🎉', f'https://t.me/{USERNAME}?startgroup=a')],
-                      [Button.inline("📚  𝖪𝗈𝗆𝗎𝗍𝗅𝖺𝗋  ", data="komutlar"),
+                      [Button.inline("📚  commands  ", data="commands"),
                        Button.url('📝  support  ', f'https://t.me/{support}')]
                     ),
                     link_preview=False)
@@ -47,29 +47,29 @@ async def start(event):
   if event.is_group:
     return await client.send_message(event.chat_id, f"{qrupstart}")
 
-# Başlanğıc Button
+# Start Button
 @client.on(events.callbackquery.CallbackQuery(data="start"))
 async def handler(event):
-    async for usr in client.iter_participants(event.chat_id):
-     ad = f"• 𝖬𝖾𝗋𝗁𝖺𝖻𝖺 [{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"{ad} {startmesaj}", buttons=(
+    async for user in client.iter_participants(event.chat_id):
+     ad = f"• HELLO [{user.first_name}](tg://user?id={user.id}) "
+     await event.edit(f"{ad} {startmessage}", buttons=(
                       [
                        Button.url('🎉  add me in your group  🎉', f'https://t.me/{USERNAME}?startgroup=a')],
-                      [Button.inline("📚  𝖪𝗈𝗆𝗎𝗍𝗅𝖺𝗋  ", data="komutlar"),
+                      [Button.inline("📚  commands  ", data="commands"),
                        Button.url('📝  support  ', f'https://t.me/katilsupport')]
                     ),
                     link_preview=False)
 
-# gece kusu
-@client.on(events.callbackquery.CallbackQuery(data="komutlar"))
+# night bird
+@client.on(events.callbackquery.CallbackQuery(data="commands"))
 async def handler(event):
-    await event.edit(f"{komutlar}", buttons=(
+    await event.edit(f"{commands}", buttons=(
                       [
                       Button.url('📣  𝖲𝗎𝗉𝗉𝗈𝗋𝗍  ', f'https://t.me/katilsupport'),
-                      Button.url('🇹🇷  𝖮𝗐𝗇𝖾𝗋  ', f'https://t.me/katil_your_dad')
+                      Button.url('♨️  𝖮𝗐𝗇𝖾𝗋  ', f'https://t.me/katil_your_dad')
                       ],
                       [
-                      Button.inline("<  𝖦𝖾𝗋𝗂  >", data="start"),
+                      Button.inline("<  🔙 Back  >", data="start"),
                       ]
                     ),
                     link_preview=False)
