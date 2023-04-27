@@ -24,7 +24,7 @@ LOGGER = logging.getLogger(__name__)
 
 
 anlik_calisan = []
-gece_tag = []
+vip_tag = []
 
 
   
@@ -77,7 +77,7 @@ async def handler(event):
 # 5 member tag modules
 @client.on(events.NewMessage(pattern="^/utag ?(.*)"))
 async def mentionall(event):
-  global gece_tag
+  global vip_tag
   if event.is_private:
     return await event.respond(f"{nogroup}")
   
@@ -108,13 +108,13 @@ async def mentionall(event):
                       ]
                     )
                   ) 
-    gece_tag.append(event.chat_id)
+    vip_tag.append(event.chat_id)
     usernum = 0
     usertxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usernum += 1
       usertxt += f"[{usr.first_name}](tg://user?id={usr.id}) , "
-      if event.chat_id not in gece_tag:
+      if event.chat_id not in vip_tag:
         await event.respond("⛔ your action stop . . .",
                     buttons=(
                       [
@@ -136,7 +136,7 @@ async def mentionall(event):
 # admin tagging modules
 @client.on(events.NewMessage(pattern="^/atag ?(.*)"))
 async def mentionalladmin(event):
-  global gece_tag
+  global vip_tag
   if event.is_private:
     return await event.respond(f"{nogroup}")
   
@@ -167,13 +167,13 @@ async def mentionalladmin(event):
                       ]
                     )
                   ) 
-    gece_tag.append(event.chat_id)
+    vip_tag.append(event.chat_id)
     usernum = 0
     usertxt = ""
     async for user in client.iter_participants(event.chat_id):
       usernum += 1
       usertxt += f"• [{user.first_name}](tg://user?id={usr.id}) "
-      if event.chat_id not in gece_tag:
+      if event.chat_id not in vip_tag:
         await event.respond("⛔ tagging stopped . . .",
                     buttons=(
                       [
@@ -195,7 +195,7 @@ async def mentionalladmin(event):
 # one by one tagging module
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
 async def onlytag(event):
-  global gece_tag
+  global vip_tag
   if event.is_private:
     return await event.respond(f"{nogroup}")
   
@@ -226,13 +226,13 @@ async def onlytag(event):
                       ]
                     )
                   ) 
-    gece_tag.append(event.chat_id)
+    vip_tag.append(event.chat_id)
     usernum = 0
     usertxt = ""
     async for user in client.iter_participants(event.chat_id):
       usernum += 1
       usertxt += f"• [{user.first_name}](tg://user?id={user.id}) "
-      if event.chat_id not in gece_tag:
+      if event.chat_id not in vip_tag:
         await event.respond("⛔ tagging has stopped . . .",
                     buttons=(
                       [
@@ -269,7 +269,7 @@ emoji = " ❤️ 🧡 💛 💚 💙 💜 🖤 🤍 🤎 🙂 🙃 😉 😌 �
 
 @client.on(events.NewMessage(pattern="^/etag ?(.*)"))
 async def etag(event):
-  global gece_tag
+  global vip_tag
   if event.is_private:
     return await event.respond(f"{nogroup}")
   
@@ -300,13 +300,13 @@ async def etag(event):
                       ]
                     )
                   ) 
-    gece_tag.append(event.chat_id)
+    vip_tag.append(event.chat_id)
     usernum = 0
     usertxt = ""
     async for user in client.iter_participants(event.chat_id):
       usernum += 1
       usertxt += f"[{random.choice(emoji)}](tg://user?id={user.id}) , "
-      if event.chat_id not in gece_tag:
+      if event.chat_id not in vip_tag:
         await event.respond("⛔ tagging has stopped . . .",
                     buttons=(
                       [
@@ -381,7 +381,7 @@ srt = (
 
 @client.on(events.NewMessage(pattern="^/stag ?(.*)"))
 async def stag(event):
-  global gece_tag
+  global vip_tag
   if event.is_private:
     return await event.respond(f"{nogroup}")
   
@@ -412,13 +412,13 @@ async def stag(event):
                       ]
                     )
                   ) 
-    gece_tag.append(event.chat_id)
+    vip_tag.append(event.chat_id)
     usernum = 0
     usertxt = ""
     async for user in client.iter_participants(event.chat_id):
       usernum += 1
       usertxt += f"[{random.choice(srt)}](tg://user?id={user.id}) "
-      if event.chat_id not in gece_tag:
+      if event.chat_id not in vip_tag:
         await event.respond("⛔ tagging has stopped . . .",
                     buttons=(
                       [
@@ -442,7 +442,7 @@ colour = "🦓 🐅 🐈‍⬛ 🐄 🦄 🐇 🐁 🐷 🐶 🙈 🙊 🐻 🐼
 
 @client.on(events.NewMessage(pattern="^/mtag ?(.*)"))
 async def rtag(event):
-  global gece_tag
+  global vip_tag
   if event.is_private:
     return await event.respond(f"{nogroup}")
   
@@ -473,13 +473,13 @@ async def rtag(event):
                       ]
                     )
                   ) 
-    gece_tag.append(event.chat_id)
+    vip_tag.append(event.chat_id)
     usernum = 0
     usertxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usernum += 1
       usertxt += f"[{random.choice(colour)}](tg://user?id={user.id}) "
-      if event.chat_id not in gece_tag:
+      if event.chat_id not in vip_tag:
         await event.respond("⛔ tagging has stopped .",
                     buttons=(
                       [
