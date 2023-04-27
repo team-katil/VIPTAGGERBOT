@@ -6,9 +6,6 @@
          "tagger",
          "group",
          "VipTaggerBot",
-         "python3",
-         "bot",
-         "telethon"
          "katilsupport"
       ],   
    "repository": "https://github.com/team-katil/VIPTAGGERBOT",
