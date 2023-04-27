@@ -36,14 +36,7 @@ LOGGER = logging.getLogger(__name__)
 anlik_calisan = []
 vip_tagger = []
 
-  
-#onetag
-@client.on(events.NewMessage(pattern="^/start$"))
-async def cancel(event):
-  global vip_tagger
-  vip_tagger.remove(event.chat_id)
-
-    
+   
 # start message 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
