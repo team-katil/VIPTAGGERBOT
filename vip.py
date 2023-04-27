@@ -37,7 +37,7 @@ async def start(event):
      await client.send_message(log_group, f"ℹ️ **New User -** \n {ad}")
      return await event.reply(f"{ad} {startmessage}", buttons=(
                       [
-                       Button.url('🎉  add me in your group  🎉', f'https://t.me/{USERNAME}?startgroup=a')],
+                       Button.url('🎉  add me in your group  🎉', f'https://t.me/{USERNAME}?startgroup=true')],
                       [Button.inline("📚  commands  ", data="commands"),
                        Button.url('📝  support  ', f'https://t.me/{support}')]
                     ),
@@ -45,7 +45,7 @@ async def start(event):
 
 
   if event.is_group:
-    return await client.send_message(event.chat_id, f"{qrupstart}")
+    return await client.send_message(event.chat_id, f"{groupstart}")
 
 # Start Button
 @client.on(events.callbackquery.CallbackQuery(data="start"))
@@ -54,7 +54,7 @@ async def handler(event):
      ad = f"• HELLO [{user.first_name}](tg://user?id={user.id}) "
      await event.edit(f"{ad} {startmessage}", buttons=(
                       [
-                       Button.url('🎉  add me in your group  🎉', f'https://t.me/{USERNAME}?startgroup=a')],
+                       Button.url('🎉  add me in your group  🎉', f'https://t.me/{USERNAME}?startgroup=true')],
                       [Button.inline("📚  commands  ", data="commands"),
                        Button.url('📝  channel  ', f'https://t.me/katil_bots')]
                     ),
