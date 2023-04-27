@@ -33,7 +33,7 @@ vip_tag = []
 async def start(event):
   if event.is_private:
     async for user in client.iter_participants(event.chat_id):
-     ad = f"• HELLO [{user.first_name}](tg://user?id={usr.id}) "
+     ad = f"• HELLO [{user.first_name}](tg://user?id={user.id}) "
      await client.send_message(log_group, f"ℹ️ **New User -** \n {ad}")
      return await event.reply(f"{ad} {startmessage}", buttons=(
                       [
