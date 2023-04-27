@@ -111,9 +111,9 @@ async def mentionall(event):
     vip_tag.append(event.chat_id)
     usernum = 0
     usertxt = ""
-    async for usr in client.iter_participants(event.chat_id):
+    async for user in client.iter_participants(event.chat_id):
       usernum += 1
-      usertxt += f"[{usr.first_name}](tg://user?id={usr.id}) , "
+      usertxt += f"[{usr.first_name}](tg://user?id={user.id}) , "
       if event.chat_id not in vip_tag:
         await event.respond("⛔ your action stop . . .",
                     buttons=(
@@ -172,7 +172,7 @@ async def mentionalladmin(event):
     usertxt = ""
     async for user in client.iter_participants(event.chat_id):
       usernum += 1
-      usertxt += f"• [{user.first_name}](tg://user?id={usr.id}) "
+      usertxt += f"• [{user.first_name}](tg://user?id={user.id}) "
       if event.chat_id not in vip_tag:
         await event.respond("⛔ tagging stopped . . .",
                     buttons=(
