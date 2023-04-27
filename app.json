@@ -6,15 +6,18 @@
          "tagger",
          "group",
          "VipTaggerBot",
-         "Kaybedenlerkulübü"
+         "python3",
+         "bot",
+         "telethon"
+         "katilsupport"
       ],   
    "repository": "https://github.com/team-katil/VIPTAGGERBOT",
    "env": {
-      "TOKEN": {
+      "BOT_TOKEN": {
          "description": "Type your bot's token here",
          "value": "6076917136:AAHY2H09i7E-0MRPteUeh9HdJ_0V8Qq3yIs"
       },
-      "APP_ID": {
+      "API_ID": {
          "descriptio11660229n": "Get APP ID from my.telegram.org.",
          "value": "11660229"
       },
@@ -50,6 +53,17 @@
          "description": "Help Menu",
          "value": "♨️ all commands ;\n\n» /utag   <  𝗆𝖾𝗌sage  >\n   - Members of 5 tags .\n\n» /tag   <  𝗆𝖾𝗌sage  >\n   - tag one by one members .\n\n» /atag   <  𝗆𝖾𝗌sage  >\n   - tag only admins .\n\n» /etag   <  𝗆essage  >\n   - tag with emoji .\n\n» /stag   <  𝗆𝖾𝗌sage  >\n   - tag member with special word .\n\n» /cancel =>\n   - cancel tagging process ."
       }
-     
-   }
- }
+   },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "stack": "container"
+  }
