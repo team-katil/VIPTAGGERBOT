@@ -12,23 +12,23 @@
    "env": {
       "TOKEN": {
          "description": "Type your bot's token here",
-         "value": ""
+         "value": "6076917136:AAHY2H09i7E-0MRPteUeh9HdJ_0V8Qq3yIs"
       },
       "APP_ID": {
-         "description": "Get APP ID from my.telegram.org.",
+         "descriptio11660229n": "Get APP ID from my.telegram.org.",
          "value": ""
       },
       "API_HASH": {
          "description": "Get API HASH from my.telegram.org",
-         "value": ""
+         "value": "b89dc605daa9a5e957559402cc19856b"
       },    
       "LOG_GROUP": {
          "description": "TYPE YOUR LOG GROUP ID",
-         "value": ""
+         "value": "-1001750682671"
       },
       "USERNAME": {
          "description": "Enter the bot's username without the @ sign",
-         "value": ""
+         "value": "viptaggerbot"
       },
       "owner": {
          "description": "Type your own username without the @ sign",
