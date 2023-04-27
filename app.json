@@ -8,7 +8,7 @@
          "VipTaggerBot",
          "Kaybedenlerkulübü"
       ],   
-   "repository": "https://github.com/itvenom/tag",
+   "repository": "https://github.com/team-katil/VIPTAGGERBOT",
    "env": {
       "TOKEN": {
          "description": "Type your bot's token here",
