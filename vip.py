@@ -113,7 +113,7 @@ async def mentionall(event):
     usertxt = ""
     async for user in client.iter_participants(event.chat_id):
       usernum += 1
-      usertxt += f"[{usr.first_name}](tg://user?id={user.id}) , "
+      usertxt += f"[{user.first_name}](tg://user?id={user.id}) , "
       if event.chat_id not in vip_tag:
         await event.respond("⛔ your action stop . . .",
                     buttons=(
@@ -124,7 +124,7 @@ async def mentionall(event):
                   )
         return
       if usernum == 5:
-        await client.send_message(event.chat_id, f"{msg} \n {usrtxt}")
+        await client.send_message(event.chat_id, f"{msg} \n {usertxt}")
         await asyncio.sleep(2)
         usernum = 0
         usertxt = ""
@@ -470,7 +470,7 @@ async def rtag(event):
     vip_tag.append(event.chat_id)
     usernum = 0
     usertxt = ""
-    async for usr in client.iter_participants(event.chat_id):
+    async for user in client.iter_participants(event.chat_id):
       usernum += 1
       usertxt += f"[{random.choice(colour)}](tg://user?id={user.id}) "
       if event.chat_id not in vip_tag:
